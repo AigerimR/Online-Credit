@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #66d144;
+  --primary-color-hover: #53b135;
+  --secondary-color: #feb119;
+  --text-color-light: #ffffff;
+  --text-color-dark: #000000;
+  --background-color-light: #f5f5f5;
+  --background-color-lightgrey: #f8f8f8;
+  --background-color-pink: rgba(255, 138, 1, 0.05);
+  --background-color-dark: #3a1bb5;
+}
+
+body {
+  background-color: var(--background-color-lightgrey);
+  font-family: "Roboto", sans-serif;
+}
+/* HEADER TOP */
+.mobile {
+  display: none;
+}
+.top {
+  height: 500px;
+  width: 100%;
+  background: url("./assets/top-image.png") no-repeat center / cover;
+  position: relative;
+  color: var(--text-color-light);
+}
+.top::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.top h1 {
+  position: absolute;
+  left: 19.79%;
+  top: 49.4%;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  text-transform: uppercase;
+}
+.top h3 {
+  position: absolute;
+  left: 20%;
+  top: 390px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+.call-box {
+  background-color: var(--background-color-dark);
+  position: absolute;
+  width: 360px;
+  height: 500px;
+  left: 61.5%;
+  top: 0px;
+  text-align: center;
+  padding-top: 46px;
+}
+.top .lang-btn {
+  width: 48px;
+  height: 36px;
+  background-color: transparent;
+  border: none;
+  color: var(--text-color-light);
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  padding-top: 1px;
+}
+.top .active {
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+.top .lang-btn:hover {
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+.top .call-btn {
+  width: 307px;
+  height: 119px;
+  border: 5px solid var(--secondary-color);
+  border-radius: 20px;
+  background-color: transparent;
+  margin-top: 94px;
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.1em;
+  color: var(--secondary-color);
+}
+.call-box .call-btn:hover {
+  cursor: pointer;
+  border: 5px solid var(--text-color-light);
+  color: var(--text-color-light);
+}
+.call-box .call-btn:hover img {
+  filter: brightness(100);
+}
+.call-box .call-btn .call-btn-text {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
+.call-box .whatsapp {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 21px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.call-box h2 {
+  color: var(--text-color-light);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+.call-box a h2 {
+  font-size: 36px;
+}
+.call-box a:hover h2 {
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+.bottom {
+  text-align: center;
+}
+.bottom h3 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 16px 0 15px 0;
+}
+.bottom p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 10px auto;
+}
+
+/* MAIN */
+main {
+  margin: 60px auto 0 auto;
+  width: 1160px;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.card {
+  background-color: var(--background-color-light);
+  height: 430px;
+  width: 360px;
+  border-radius: 6px;
+  text-align: center;
+  padding: 22px 30px 30px 30px;
+}
+.card .logo {
+  margin: 0px auto 19px auto;
+}
+
+.card h4 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 16px 0 15px 0;
+  font-weight: 500;
+  font-size: 18px;
+}
+.card .card-text {
+  margin-top: 33px;
+  margin-bottom: 28px;
+}
+.card .card-text p {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.card button {
+  width: 300px;
+  height: 54px;
+  background: var(--primary-color);
+  border-radius: 6px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--text-color-light);
+  margin-top: 15px;
+}
+.card button:hover {
+  cursor: pointer;
+  background-color: var(--primary-color-hover);
+}
+
+.side-info {
+  background-color: var(--background-color-pink);
+  width: 360px;
+  padding: 29px 25px;
+  font-size: 22px;
+  line-height: 36px;
+  text-align: left;
+}
+.line {
+  border-bottom: 1px solid #ff8a01;
+  width: 310px;
+  margin: 20px auto;
+}
+.side-info-text {
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 1600px) {
+  .top h1 {
+    left: 14%;
+    font-size: 42px;
+  }
+  .top h3 {
+    left: 14.3%;
+  }
+}
+@media (max-width: 375px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    height: 687px;
+    width: 375px;
+    display: block;
+    height: 687px;
+    background: url("./assets/top-image-mobile.png") no-repeat top / contain;
+    position: relative;
+    color: var(--text-color-light);
+  }
+  .top h1 {
+    top: 27.66%;
+    left: 10.67%;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .top h3 {
+    left: 10.67%;
+    top: 44.83%;
+    font-size: 18px;
+  }
+  .lang-change {
+    width: 110px;
+    height: 56px;
+    background-color: var(--background-color-dark);
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    padding-top: 13px;
+  }
+  .top .lang-btn {
+    font-size: 22px;
+    width: 40px;
+    height: 30px;
+    padding: 0;
+  }
+  .call-box {
+    width: 375px;
+    height: 259px;
+    left: 0;
+    top: 376px;
+    text-align: left;
+    padding-top: 30px;
+    padding-left: 40px;
+  }
+  .call-box .call-btn {
+    margin-top: 0;
+    width: 265px;
+    height: 105px;
+    font-size: 64px;
+    line-height: 75px;
+  }
+  .call-btn-text img {
+    height: 47px;
+  }
+  .call-box h2 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .call-box .whatsapp {
+    justify-content: left;
+  }
+  .call-box a h2 {
+    font-size: 28px;
+    line-height: 32.8px;
+  }
+  .overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 375px;
+    height: 52px;
+    background-color: #c7cbcf;
+  }
+
+  .bottom h3 {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 20px 0 20px 0;
+  }
+  .bottom p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  main {
+    width: 335px;
+    margin-top: 40px;
+  }
+  .main-container {
+    flex-direction: column-reverse;
+    margin-bottom: 40px;
+  }
+  .cards-container {
+    row-gap: 20px;
+    column-gap: 19px;
+  }
+  .card {
+    height: 220px;
+    width: 158px;
+    border-radius: 4px;
+    padding: 0px 10px 10px 15px;
+  }
+  .card .logo {
+    margin: 12px auto;
+    height: 20px;
+  }
+  .card h4 {
+    padding: 10px 0 10px 0;
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .card .card-text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .card .card-text p {
+    margin-bottom: 8px;
+    font-size: 9px;
+  }
+  .card button {
+    width: 138px;
+    height: 30px;
+    border-radius: 4px;
+    font-size: 9px;
+    line-height: 11px;
+    margin-top: 0;
+  }
+  .side-info {
+    width: 100%;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .line {
+    width: 295px;
+  }
+}
